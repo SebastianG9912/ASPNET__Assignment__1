@@ -4,19 +4,24 @@ namespace ASPNET_Assignment_1.Controllers
 {
     public class Event : Controller
     {
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    return View("/Views/Event/Home.cshtml");
+        //}
+
+        public IActionResult Home()
         {
-            return View("/Views/Event/Home.cshtml");
+            return View();
         }
 
         public IActionResult Events()
         {
-            return View("/Views/Event/Events.cshtml");
+            return View();
         }
 
         public IActionResult MyEvents()
         {
-            return View("/Views/Event/MyEvents.cshtml");
+            return View();
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿@{
-    <body>
     <h1>
         Welcome
     </h1>
@@ -7,8 +6,16 @@
     <a asp-action="Events">
         Register
     </a>
+
     <a asp-action="Events">
         Log In
     </a>
-    </body>
+}
+
+@section Style{
+    <style>
+        body {
+            border: 1px solid black;
+        }
+    </style>
 }
