@@ -4,9 +4,10 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<Database>();
 
-var connectionString = @"Server=(localdb)\mssqllocaldb;
-                         Database=>EventiaDB";
+var connectionString = "Server=(localdb)\\mssqllocaldb;" +
+                       "Database=EventiaDB";
 builder.Services.AddDbContext<EventDbContext>(
     options =>
     {
@@ -27,6 +28,9 @@ using(var scope = app.Services.CreateScope())
 {
     var database = scope.ServiceProvider
         .GetRequiredService<Database>();
+
+    await database.RecreateDb();
+    await database.Seed();
 }
 
 app.Run();

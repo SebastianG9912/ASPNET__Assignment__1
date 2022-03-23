@@ -9,6 +9,11 @@ namespace ASPNET_Assignment_1.Data
         public DbSet<Attendee> Attendees { get; set; }
         public DbSet<EventInfo> EventInfos { get; set; }
 
+        public EventDbContext(DbContextOptions<EventDbContext> options) : base(options)
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<AttendeeEventInfo>()

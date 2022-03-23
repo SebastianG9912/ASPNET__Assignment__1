@@ -13,6 +13,6 @@ namespace ASPNET_Assignment_1.Models
 
         public Organizer Organizer { get; set; }
 
-        public ICollection<AttendeeEventInfo>? AttendeeEventInfo { get; set; }
+        public ICollection<AttendeeEventInfo>? AttendeeEventInfos { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASPNET_Assignment_1.Models
 {
@@ -11,6 +12,7 @@ namespace ASPNET_Assignment_1.Models
         public string Email { get; set; }
 
         public string Phone_number { get; set; }
+
 
         public ICollection<EventInfo>? EventInfos { get; set; }
     }
